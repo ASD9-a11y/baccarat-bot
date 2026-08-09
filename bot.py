@@ -15,8 +15,8 @@ API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 # ========== БАЗА ДАННЫХ ==========
 def get_conn():
     if DATABASE_URL:
-        import psycopg2
-        return psycopg2.connect(DATABASE_URL)
+        import psycopg
+        return psycopg.connect(DATABASE_URL)
     else:
         import sqlite3
         return sqlite3.connect("bot.db")
